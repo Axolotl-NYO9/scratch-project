@@ -10,6 +10,9 @@
     <!--the 'root' DOM node, everything inside it will be managed by React DOM-->
     <!-- in prod mode Error could not find root node because we put script after root tag so that script can find root there otherwise script will look for non-existent root -->
     <!-- We thought it was a webpack issue because it ran in one mode but not the other -->
+    <!-- this happens because client sends get request for index.html file, which is read line by line -->
+    <!-- When script tag is reached, another get request is made for bundle.js, which cannot find the root tag -->
+    <!-- Webpack entry point is just for bundling, not for execution of code by client -->
     <div id="root"></div>
     <script type="text/javascript" src="/build/bundle.js"></script>
     
