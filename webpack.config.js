@@ -2,7 +2,7 @@ const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./client/index.js",
+  entry: path.join(__dirname,"./client/index.js"),
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
@@ -11,7 +11,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|js)$/,
+        // test: /\.(js|js)$/,
+        test: /\.jsx?/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -38,13 +39,14 @@ module.exports = {
       publicPath: "/",
     },
     proxy: {
-      "/api:": "http://localhost:3000",
+      "/": "http://localhost:3000",
+      // "/api": "http://localhost:3000",
     },
   },
   //plugin
   plugins: [
     new HTMLWebpackPlugin({
-      template: path.join(__dirname, "build", "index.html"),
+      template: path.join(__dirname, "./client/index.html"),
     }),
   ],
 };
