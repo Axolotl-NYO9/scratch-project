@@ -1,31 +1,80 @@
-/* .BoredButton {
-    display: flex;
-    width: 150px;
-    height: 150px;
-    margin: 30px;
-    background-color: rgb(253, 189, 72);
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    justify-content: center;
+
+.BoredButton {
+    display: flex; 
+    width: 150px; 
+    height: 150px; 
+    margin: 30px; 
+    background-color: rgb(253, 189, 72); 
+    font-size: 20px; font-weight: bold; 
+    color: rgb(255, 255, 255); 
+    justify-content: center; 
     align-items: center; 
-    padding: 0;
-    border: none;
-    border-radius: 15px;
-} */
+    padding: 0; 
+    border: none; 
+    border-radius: 15px; 
+}
 
-.app {
-    /* color:  red; */
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    color: rgba(62, 59, 63, 0.797);
+.HappyButton {
+    display: flex; 
+    width: 150px; 
+    height: 150px; 
+    margin: 30px; 
+    background-color: rgb(253, 189, 72); 
+    font-size: 20px; font-weight: bold; 
+    color: rgb(255, 255, 255); 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0; 
+    border: none; 
+    border-radius: 15px; 
+}
 
-    /* height: 100vh; */
+.AngryButton {
+
+    display: flex; 
+    width: 150px; 
+    height: 150px; 
+    margin: 30px; 
+    background-color: rgb(253, 189, 72); 
+    font-size: 20px; font-weight: bold; 
+    color: rgb(255, 255, 255); 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0; 
+    border: none; 
+    border-radius: 15px; 
 
 }
 
-/* .buttons {
-    display: flex;
-} */
+.SadButton {
+    display: flex; 
+    width: 150px; 
+    height: 150px; 
+    margin: 30px; 
+    background-color: rgb(253, 189, 72); 
+    font-size: 20px; font-weight: bold; 
+    color: rgb(255, 255, 255); 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0; 
+    border: none; 
+    border-radius: 15px; 
+
+}
+    
+.app { 
+    color:  red;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    color: rgba(62, 59, 63, 0.797);  
+
+}
+
+
+ .buttons { 
+    display: flex; 
+}
+    
+
