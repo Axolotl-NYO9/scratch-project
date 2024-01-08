@@ -20,14 +20,11 @@ module.exports = {
             presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
-        // resolve: {
-        //   extension: [".js", ".jsx"],
-        // },
       },
       {
         test: /\.(css|scss)$/,
         exclude: /node_modules/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
