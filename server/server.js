@@ -21,6 +21,7 @@ mongoose.connection.once("open", () => {
 app.use(express.json());
 
 app.use("/build", express.static(path.join(__dirname, "../build")));
+
 app.get("/", (req, res) => {
   console.log(req.body);
   res.sendFile(path.join(__dirname, "../client/index.html"));
