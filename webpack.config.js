@@ -44,7 +44,7 @@ module.exports = {
   //plugin
   plugins: [
     new HTMLWebpackPlugin({
-      template: path.join(__dirname, "build", "index.html"),
+      template: path.join(__dirname, "client", "index.html"),
     }),
   ],
 };
