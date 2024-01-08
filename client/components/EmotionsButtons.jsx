@@ -21,7 +21,7 @@ export function BoredButton() {
 
     }}
      >
-             {boredFace}
+             { boredFace }
      </button>
  )
 };
@@ -37,7 +37,7 @@ export function HappyButton() {
      // When user clicks this, give the user the html page (On click will do a get request to the server)
      onClick={() => alert('Going to sign up for Energy Life Pakage! (Page Loading...)')}
      >
-             {happyFace}
+             { happyFace }
      </button>
  )
 };

@@ -1,8 +1,6 @@
 //import react and react-dom
 import React from "react";
 import {render} from "react-dom";
-
-import EmotionsButtons from "./EmotionsButtons.jsx"
 import { BoredButton } from "./EmotionsButtons.jsx"
 import { HappyButton } from "./EmotionsButtons.jsx"
 import { AngryButton } from "./EmotionsButtons.jsx"
