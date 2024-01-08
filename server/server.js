@@ -22,10 +22,11 @@ mongoose.connection.once('open', ()=>{
 //parsing incoming json requests
 app.use(express.json());
 
+app.use('/build', express.static(path.join(__dirname,'../build')))
 app.get("/", (req, res) => {
   console.log(req.body);
-  res.send("hi");
-  res.sendFile(path.join(__dirname, "./client/index.html"));
+  res.sendFile(path.join(__dirname, '../client/index.html'))
+  // res.sendFile(path.join(__dirname, /* add indext html file her*/ ));
 });
 
 
