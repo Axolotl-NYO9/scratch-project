@@ -9,7 +9,7 @@ mongoose.connection.once("open", () => {
   console.log("Connected inside data folder");
 });
 
-console.log(Emotions);
+// console.log(Emotions);
 
 // Emotions.deleteMany({}).then(console.log('objects deleted'))
 
@@ -48,4 +48,7 @@ const Happy = new Emotions({
 Bored.save().then(console.log("successful save Bored"));
 Angry.save().then(console.log("successful save Angry"));
 Sad.save().then(console.log("successful save Sad"));
-Happy.save().then(console.log("successful save Happy"));
+Happy.save().then(console.log("successful save Happy")); 
+
+
+
