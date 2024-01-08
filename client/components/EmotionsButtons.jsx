@@ -28,7 +28,7 @@ export function BoredButton() {
 
 export function HappyButton() {
 
-    const happyFace = ":)"
+    const happyFace = ": )"
 
     return (
      <button 
@@ -43,7 +43,7 @@ export function HappyButton() {
 
 export function AngryButton() {
 
-    const angryFace = ">:("
+    const angryFace = ">: ("
 
     return (
      <button 
@@ -58,7 +58,7 @@ export function AngryButton() {
 
 export function SadButton() {
 
-    const sadFace = ":("
+    const sadFace = ": ("
 
     return (
      <button 
