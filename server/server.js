@@ -3,6 +3,8 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
+// const emotionsControllers = require('./controllers/emotionsController')
+
 //morgan installation connection
 const morgan = require("morgan");
 //configure morgan to log requests
@@ -21,13 +23,21 @@ mongoose.connection.once("open", () => {
 app.use(express.json());
 
 app.use("/build", express.static(path.join(__dirname, "../build")));
+
 app.get("/", (req, res) => {
   console.log(req.body);
   res.sendFile(path.join(__dirname, "../client/index.html"));
   // res.sendFile(path.join(__dirname, /* add indext html file her*/ ));
 });
 
-app.post;
+// app.get('/boredButton', emotionsControllers.boredButton, (req, res) => {
+//   console.log('bored button click')
+//   res.sendStatus(200);
+// })
+
+// console.log(emotionsControllers)
+
+// app.post;
 
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
 
