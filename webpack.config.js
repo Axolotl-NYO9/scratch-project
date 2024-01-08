@@ -38,13 +38,13 @@ module.exports = {
       publicPath: "/",
     },
     proxy: {
-      "/api:": "http://localhost:3000",
+      "/": "http://localhost:3000",
     },
   },
   //plugin
   plugins: [
     new HTMLWebpackPlugin({
-      template: path.join(__dirname, "build", "index.html"),
+      template: path.join(__dirname, "./client/index.html"),
     }),
   ],
 };
