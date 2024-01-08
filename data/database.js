@@ -1,21 +1,22 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const signupSchema = require("./schemas");
+const Emotions = require("./schemas");
 
-const signupSchema = new mongoose.Schema({
-    userName: {type: String, required: true},
-    password: {type: String, type: Number, required: true}
-})
+const mongoURI = "mongodb://127.0.0.1:27017/ChallengeBoosterDatabase";
+mongoose.connect(mongoURI);
 
-// const happySchema = new mongoose.Schema({
+mongoose.connection.once("open", () => {
+  console.log("Connected inside data folder");
+});
 
-// })
+console.log(Emotions);
 
-// const sadSchema = new mongoose.Schema({
+const Bored = new Emotions({
+  emotion: "Bored",
+  challenge1:
+    "You're feeling bored? No problem. We're going to give you a great challenge (this is challenge 1) ",
+  challenge2: "(this is challenge 2)",
+  challenge3: "(this is challenge 3)",
+});
 
-// })
-
-// const angrySchema = new mongoose.schema({
-
-// })
-
-
-module.exports = mongoose.model('signup', signupSchema)
+Bored.save().then(console.log("successful save"));
