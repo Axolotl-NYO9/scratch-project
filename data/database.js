@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
-const signupSchema = require("./schemas");
-const Emotions = require("./schemas");
+const { Signup, Emotions } = require("./schemas");
 
 const mongoURI = "mongodb://127.0.0.1:27017/ChallengeBoosterDatabase";
 mongoose.connect(mongoURI);
@@ -33,7 +32,7 @@ const Sad = new Emotions({
   challenge1:
     "You're feeling bored? No problem. We're going to give you a great challenge (this is challenge 1) ",
   challenge2: "listen to your favorite song that always makes you feel better",
-  challenge3: "Go outside  and find some space to stare at the sky",
+  challenge3: "Go outside and find some space to stare at the sky",
 });
 
 const Happy = new Emotions({
@@ -48,7 +47,8 @@ const Happy = new Emotions({
 Bored.save().then(console.log("successful save Bored"));
 Angry.save().then(console.log("successful save Angry"));
 Sad.save().then(console.log("successful save Sad"));
-Happy.save().then(console.log("successful save Happy")); 
+Happy.save().then(console.log("successful save Happy"));
 
+module
 
-
+Emotions.findOne({ emotion: "Bored" }).then((data) => console.log(data));
