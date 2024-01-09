@@ -49,6 +49,4 @@ Angry.save().then(console.log("successful save Angry"));
 Sad.save().then(console.log("successful save Sad"));
 Happy.save().then(console.log("successful save Happy"));
 
-module
-
 Emotions.findOne({ emotion: "Bored" }).then((data) => console.log(data));
