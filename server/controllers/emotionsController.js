@@ -1,13 +1,13 @@
-// const Emotions = require('../../data/database')
+const Emotions = require('../../data/database')
 
-// const emotionsControllers = {};
+const emotionsControllers = {};
 
-// emotionsControllers.boredButton = (req, res, next) => {
+emotionsControllers.boredButton = (req, res, next) => {
 
-//     Emotions.findOne({emotions: 'Bored'}).then(data => console.log(data));
-//     console.log('hello')
-// }
+    Emotions.findOne({emotions: 'Bored'}).then(data => console.log(data));
+    console.log('hello')
+}
 
-// Emotions.findOne({emotions: 'Bored'}).then(data => console.log(data));
+Emotions.findOne({emotions: 'Bored'}).then(data => console.log(data));
 
-// module.exports = emotionsControllers;
+module.exports = emotionsControllers;

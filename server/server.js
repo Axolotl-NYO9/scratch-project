@@ -30,14 +30,10 @@ app.get("/", (req, res) => {
   // res.sendFile(path.join(__dirname, /* add indext html file her*/ ));
 });
 
-// app.get('/boredButton', emotionsControllers.boredButton, (req, res) => {
-//   console.log('bored button click')
-//   res.sendStatus(200);
-// })
-
-// console.log(emotionsControllers)
-
-// app.post;
+app.get('/boredButton', emotionsControllers.boredButton, (req, res) => {
+  console.log('bored button click')
+  res.sendStatus(200);
+})
 
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
 
