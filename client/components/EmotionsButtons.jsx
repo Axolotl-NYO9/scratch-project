@@ -9,12 +9,12 @@ export function BoredButton() {
 
   const boredFace = ": |";
 
-  //this map method is not working right now or rendering to the screen
+  // need to create proper method to render the object
+  // from the database to the browser
   const emotionResponse = mood.map((emotions) => (
     <li key={emotions._id}>
       {emotions.emotions}
       <br />
-      <button>Add A Review</button>
     </li>
   ));
 
@@ -31,7 +31,6 @@ export function BoredButton() {
         fetch("/boredButton")
           .then((response) => response.json())
           .then((json) => console.log(json))
-          .then((bla) => setMood((a) => emotionResponse))
           .then(console.log(emotionResponse));
       }}
     >

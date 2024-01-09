@@ -4,7 +4,7 @@ import "../style/style.css"
 // Remember that this button will redirect to localhost8080/signUp
 function SignUpButton() {
 
-
+//no functionality yet 
     
     return (
      <button 
