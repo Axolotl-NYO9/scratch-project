@@ -1,75 +1,93 @@
-import React from 'react';
-import "../style/style.css"
+// import React from "react";
+import "../style/style.css";
+import React, { useState, useEffect } from "react";
 
 // Remember that this button will redirect to localhost8080/signUp
 
 export function BoredButton() {
+  const [mood, setMood] = useState([]);
 
-    const boredFace = ": |";
+  const boredFace = ": |";
 
-    return (
-     <button 
-     className='BoredButton'
-    // bring thing data base
+  // need to create proper method to render the object
+  // from the database to the browser
+  const emotionResponse = mood.map((emotions) => (
+    <li key={emotions._id}>
+      {emotions.emotions}
+      <br />
+    </li>
+  ));
 
-    // communicate with the server 
-        // with a get request
-    onClick={() => {
+  console.log(emotionResponse);
+
+  return (
+    <button
+      className="BoredButton"
+      // bring thing data base
+
+      // communicate with the server
+      // with a get request
+      onClick={() => {
         fetch("/boredButton")
-        .then((response) => response.json())
-        .then((json) => console.log(json));
-
-    }}
-     >
-             { boredFace }
-     </button>
- )
-};
-
+          .then((response) => response.json())
+          .then((json) => console.log(json))
+          .then(console.log(emotionResponse));
+      }}
+    >
+      {boredFace}
+      {emotionResponse}
+    </button>
+  );
+}
 
 export function HappyButton() {
+  const happyFace = ": )";
 
-    const happyFace = ": )"
-
-    return (
-     <button 
-     className='HappyButton'
-     // When user clicks this, give the user the html page (On click will do a get request to the server)
-     onClick={() => alert('Going to sign up for Energy Life Pakage! (Page Loading...)')}
-     >
-             { happyFace }
-     </button>
- )
-};
+  return (
+    <button
+      className="HappyButton"
+      // When user clicks this, give the user the html page (On click will do a get request to the server)
+      onClick={() =>
+        alert(
+          "Go and share your joy with others (maybe help someone with a problem)!"
+        )
+      }
+    >
+      {happyFace}
+    </button>
+  );
+}
 
 export function AngryButton() {
+  const angryFace = ">: (";
 
-    const angryFace = ">: ("
-
-    return (
-     <button 
-     className='AngryButton'
-     // When user clicks this, give the user the html page (On click will do a get request to the server)
-     onClick={() => alert('Going to sign up for Energy Life Pakage! (Page Loading...)')}
-     >
-             { angryFace }
-     </button>
- )
-};
+  return (
+    <button
+      className="AngryButton"
+      // When user clicks this, give the user the html page (On click will do a get request to the server)
+      onClick={() =>
+        alert(
+          "Take some deep breaths, turn on <this playlist> and go for a walk"
+        )
+      }
+    >
+      {angryFace}
+    </button>
+  );
+}
 
 export function SadButton() {
+  const sadFace = ": (";
 
-    const sadFace = ": ("
-
-    return (
-     <button 
-     className='SadButton'
-     // When user clicks this, give the user the html page (On click will do a get request to the server)
-     onClick={() => alert('Going to sign up for Energy Life Pakage! (Page Loading...)')}
-     >
-             { sadFace }
-     </button>
- )
-};
-
-
+  return (
+    <button
+      className="SadButton"
+      // When user clicks this, give the user the html page (On click will do a get request to the server)
+      onClick={() =>
+        alert("Go outside and find some space to stare at the sky")
+      }
+    >
+      {sadFace}
+    </button>
+  );
+}

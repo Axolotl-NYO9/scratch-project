@@ -12,7 +12,8 @@ const emotionSchema = new mongoose.Schema({
   challenge3: { type: String, required: true },
 });
 
-module.exports = mongoose.model("signup", signupSchema);
+const Signup = mongoose.model("signup", signupSchema);
 
 const Emotions = mongoose.model("Emotions", emotionSchema);
-module.exports = Emotions;
+
+module.exports = {Signup, Emotions};

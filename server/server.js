@@ -3,7 +3,8 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
-// const emotionsControllers = require('./controllers/emotionsController')
+const emotionsControllers = require("./controllers/emotionsController");
+// console.log(emotionsControllers);
 
 //morgan installation connection
 const morgan = require("morgan");
@@ -30,10 +31,14 @@ app.get("/", (req, res) => {
   // res.sendFile(path.join(__dirname, /* add indext html file her*/ ));
 });
 
-app.get('/boredButton', emotionsControllers.boredButton, (req, res) => {
-  console.log('bored button click')
-  res.sendStatus(200);
-})
+app.get("/boredButton", emotionsControllers.boredButton, (req, res) => {
+  console.log("bored button click");
+  res.status(200).json(res.locals.bored);
+});
+
+// console.log(emotionsControllers)
+
+// app.post;
 
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
 

@@ -2,7 +2,7 @@ const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: path.join(__dirname,"./client/index.js"),
+  entry: path.join(__dirname, "./client/index.js"),
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
@@ -36,10 +36,8 @@ module.exports = {
       publicPath: "/",
     },
     proxy: {
-      '/api': 'http://localhost:3000',
-      '/boredButton': 'http://localhost:3000',
-      '/': 'http://localhost:3000',
-      '/build/bundle.js': 'http://localhost:3000'
+      "/boredButton": "http://localhost:3000",
+      "/": "http://localhost:3000",
     },
   },
   //plugin
